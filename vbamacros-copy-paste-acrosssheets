@@ -1,0 +1,30 @@
+Sub Macro1()
+'
+' Macro1 Macro
+' description: copy/paste data columns from one sheet to another
+'first sheet is "ACS_16_5YR_B23025_with_ann"
+'second sheet is "Sheet1"
+
+'
+    Sheets.Add After:=ActiveSheet
+    Sheets("ACS_16_5YR_B23025_with_ann").Select
+    Columns("A:C").Select
+    Selection.Copy
+    Sheets("Sheet1").Select
+    ActiveSheet.Paste
+    Sheets("ACS_16_5YR_B23025_with_ann").Select
+    Columns("J:J").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("Sheet1").Select
+    Range("B1").Select
+    ActiveSheet.Paste
+    Sheets("ACS_16_5YR_B23025_with_ann").Select
+    Columns("L:L").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("Sheet1").Select
+    Columns("C:C").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+End Sub
