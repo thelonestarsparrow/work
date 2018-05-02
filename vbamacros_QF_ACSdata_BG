@@ -3,7 +3,9 @@ Sub QF_ACSdata_BG()
 'QF_ACSdata_BG Macro
 'QF = Quick Find
 'BG = Block Group
-
+'
+'note that this is a good starting point for a macro to copy/paste data from one worksheet to another (within same workbook)
+'
 'description: copy/paste data columns from downloaded sheet to a new sheet
 'data columns are: A-C are identification data; J is employment count; L is unemployment count
 '
