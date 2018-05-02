@@ -1,7 +1,12 @@
-Sub Macro1()
+Sub QF_ACSdata_BG()
 '
-' Macro1 Macro
-' description: copy/paste data columns from one sheet to another
+'QF_ACSdata_BG Macro
+'QF = Quick Find
+'BG = Block Group
+
+'description: copy/paste data columns from downloaded sheet to a new sheet
+'data columns are: A-C are identification data; J is employment count; L is unemployment count
+'
 'first sheet is "ACS_16_5YR_B23025_with_ann"
 'second sheet is "Sheet1"
 
