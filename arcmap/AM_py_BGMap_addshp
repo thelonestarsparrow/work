@@ -5,4 +5,11 @@
 # creates a temporary out_layer
 
 
-arcpy.MakeFeatureLayer_management(r"C:\Users\Maggie\Dropbox\aa Impact DataSource\Clients\EB5\zzAG\1 - Shapefiles\2015 Files\Block Groups\05-Arkansas\tl_2015_05_bg.shp", "arkansasshapefile")
+#define year & location of shapefile(s)
+year = "2015"
+loc = r"C:\Users\Maggie\Dropbox\aa Impact DataSource\Clients\EB5\zzAG\1 - Shapefiles"+"\\"+year+" Files\Block Groups"+"\\"
+stlist = ["05-Arkansas","20-Kansas BG"]
+
+for st in stlist:
+     arcpy.MakeFeatureLayer_management(loc+st+r"\tl_"+year+"_"+st[:2]+"_bg.shp",st+"layer")
+
