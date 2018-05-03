@@ -1,0 +1,12 @@
+#first: must "export" csv files to the .gdb files (see ".../_convert" file)
+#naming convention: "Export_Output_TEA_YYYY_Block_Groups_ST"
+
+#define the states/files to be calculated
+stlist = ["KS","MD", "NM","NC","OK", "OR", "UT", "VT", "VA", "WA"]
+
+#add a "joinid" field to the table
+#calculate the joind for the block group ID
+for st in stlist:
+    arcpy.AddField_management("Export_Output_TEA_2017_Block_Groups_"+st, "joinid", "TEXT", 15,"","","", "NULLABLE")
+    arcpy.CalculateField_management("Export_Output_TEA_2017_Block_Groups_"+st, 
+                                field="joinid", expression="!fFIPS![-12:]", expression_type="PYTHON_9.3", code_block="")
