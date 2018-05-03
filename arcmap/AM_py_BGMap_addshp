@@ -1,0 +1,8 @@
+
+
+#syntax:
+# MakeFeatureLayer_management (in_features, out_layer, {where_clause}, {workspace}, {field_info})
+# creates a temporary out_layer
+
+
+arcpy.MakeFeatureLayer_management(r"C:\Users\Maggie\Dropbox\aa Impact DataSource\Clients\EB5\zzAG\1 - Shapefiles\2015 Files\Block Groups\05-Arkansas\tl_2015_05_bg.shp", "arkansasshapefile")
